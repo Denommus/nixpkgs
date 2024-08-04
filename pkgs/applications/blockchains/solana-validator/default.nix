@@ -85,6 +85,11 @@ rustPlatform.buildRustPackage rec {
 
   doCheck = false;
 
+  postInstall = ''
+    mkdir -p $out/bin/sdk/sbf
+    cp -a ./sdk/sbf/* $out/bin/sdk/sbf/
+  '';
+
   env = {
     # Used by build.rs in the rocksdb-sys crate. If we don't set these, it would
     # try to build RocksDB from source.

@@ -88,11 +88,6 @@ rustPlatform.buildRustPackage rec {
     #   --bash <($out/bin/solana completion --shell bash) \
     #   --fish <($out/bin/solana completion --shell fish) \
     #   --zsh  <($out/bin/solana completion --shell zsh)
-
-    mkdir -p $out/bin/sdk/bpf
-    cp -a ./sdk/bpf/* $out/bin/sdk/bpf/
-    mkdir -p $out/bin/sdk/sbf
-    cp -a ./sdk/sbf/* $out/bin/sdk/sbf/
   '';
 
   # Used by build.rs in the rocksdb-sys crate. If we don't set these, it would
