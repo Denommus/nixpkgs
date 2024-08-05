@@ -88,6 +88,9 @@ rustPlatform.buildRustPackage rec {
   postInstall = ''
     mkdir -p $out/bin/sdk/sbf
     cp -a ./sdk/sbf/* $out/bin/sdk/sbf/
+    mkdir -p $out/bin/deps
+    find . -name libsolana_program.dylib -exec cp {} $out/bin/deps/ \;
+    find . -name libsolana_program.rlib -exec cp {} $out/bin/deps/ \;
   '';
 
   env = {
