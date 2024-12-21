@@ -1349,6 +1349,8 @@ let
 
     ocamlformat-lib = callPackage ../development/ocaml-modules/ocamlformat/ocamlformat-lib.nix { };
 
+    ocamlformat-mlx-lib = callPackage ../development/ocaml-modules/ocamlformat-mlx/ocamlformat-mlx-lib.nix { };
+
     ocamlformat-rpc-lib = callPackage ../development/ocaml-modules/ocamlformat/ocamlformat-rpc-lib.nix { };
 
     ocamlfuse = callPackage ../development/ocaml-modules/ocamlfuse { };
